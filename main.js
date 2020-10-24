@@ -1,49 +1,79 @@
 
-//Variables & Operators
+//Conditional Statements
 // ex1
-const maxCapacity = 14
-let surfTime = true
-let bestStudent 
-const purposeInLife 
-console.log(maxCapacity) // 14
-console.log(surfTime) // true
-console.log(bestStudent) // undefined
-console.log(purposeInLife) // Missing initializer in const declaration
+let numChildren = 3
+const isCareful = false
+if(!isCareful){
+    numChildren++
+}
+console.log(numChildren) // 4
 /************************************************************************/
 //ex2
-let strVar = "this "
-strVar += "is the best thing ever"
-console.log(strVar)
+const silverwareCount = 9
+if(silverwareCount % 2 != 0){
+    console.log("there is something missing")
+}
 /************************************************************************/
 //ex3
-const password = "my-password"
-const confirmPassword = "my-password"
-console.log(password == confirmPassword)
+let performance = "stellar"
+let salary = 10000
+const goodBonus = 1000
+const stellarBonus = 3000
+if(performance == "stellar"){
+    salary += stellarBonus
+}else if(performance == "good"){
+    salary += goodBonus
+}
 /************************************************************************/
 //ex4
-console.log(423 * 12)
-console.log(802 / 2)
-console.log((5+6) * 3)
+const isVIP = false
+let cash = 500
+if (isVIP || (cash > 300)){
+    console.log("welcome with a nice greeting")
+}else{
+    console.log("bubye")
+}
 /************************************************************************/
 //ex5
-console.log((5 > 2) && false) // falsey 
-console.log(!("knife" === "sword")) // truthy
-console.log((1 < 2) || (-1 > -1) || !false) // truthy 
-console.log("") // falsey (prints empty string)
-console.log((31 % 5) == "1") // truthy 
-console.log(!!true) // truthy 
-console.log("5th Avenue" != "5th Avenue") // falsey
-console.log(52 !== "52") // truthy
-console.log((undefined || null)) // falsey (null)
+const a = 3
+let b = 2
+let c = 0 || 12
+let d
+b = c
+b++
+if(d){
+  b = a
+}
+d = a + (b * c)
+d++
+b += 2 // a = 3 || b = 15 || c = 12 || d = 160 
 /************************************************************************/
 //ex6
-let a = 3
-a = 4
-let c = 0
-let b = a
-b = 2
-a = b
-b = c
-c = a
-a = b // a = 0 | b = 0 | c = 2 
+const gender = null
+let profession = "business"
+if(gender == 'male'){
+    profession += "man"
+}else if(gender == 'female'){
+    profession += "woman"
+}else{
+    profession += "person"
+}
+console.log(profession)
+/************************************************************************/
+//ex7
+let boughtTesla = true
+const yearOfTeslaPurchase = 2014
+let isUSCitizen = true
+let currentYear = 2018
+if(boughtTesla && isUSCitizen){
+    if((currentYear - yearOfTeslaPurchase) >= 4){
+        console.log("would you like an upgrade?")
+    }else{
+        console.log("are you satisfied with the car?")
+    }
+}else if(boughtTesla){
+    console.log("wanna move to the US?")
+}else if(!boughtTesla){
+    console.log("wanna buy one?")
+}
 /************************************************************************/
